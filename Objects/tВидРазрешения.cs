@@ -20,7 +20,7 @@ namespace IIS.RS_2
 
 
     /// <summary>
-    /// tВидРазрешения.
+    /// T вид разрешения.
     /// </summary>
     //  *** Start programmer edit section *** (tВидРазрешения CustomAttributes)
 

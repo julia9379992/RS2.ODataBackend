@@ -21,13 +21,30 @@ namespace IIS.RS_2
 
 
     /// <summary>
-    /// РазрешНаСтроит.
+    /// Разреш на строит.
     /// </summary>
     //  *** Start programmer edit section *** (РазрешНаСтроит CustomAttributes)
 
     //  *** End programmer edit section *** (РазрешНаСтроит CustomAttributes)
     [AutoAltered()]
+    [Caption("Разреш на строит")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("РазрешНаСтроитE", new string[] {
+            "Наименование as \'Наименование\'",
+            "ВидРазрешения as \'Вид разрешения\'",
+            "Архив as \'Архив\'",
+            "ДатаРазрешения as \'Дата разрешения\'",
+            "НомерРазрешения as \'Номер разрешения\'"})]
+    [AssociatedDetailViewAttribute("РазрешНаСтроитE", "ОбъектСтроит", "ОбъектСтроитE", true, "", "Объект строит", true, new string[] {
+            ""})]
+    [AssociatedDetailViewAttribute("РазрешНаСтроитE", "Застройщик", "ЗастройщикE", true, "", "Застройщик", true, new string[] {
+            ""})]
+    [View("РазрешНаСтроитL", new string[] {
+            "Наименование as \'Наименование\'",
+            "ВидРазрешения as \'Вид разрешения\'",
+            "Архив as \'Архив\'",
+            "ДатаРазрешения as \'Дата разрешения\'",
+            "НомерРазрешения as \'Номер разрешения\'"})]
     public class РазрешНаСтроит : ICSSoft.STORMNET.DataObject
     {
         
@@ -207,7 +224,7 @@ namespace IIS.RS_2
         }
         
         /// <summary>
-        /// РазрешНаСтроит.
+        /// Разреш на строит.
         /// </summary>
         //  *** Start programmer edit section *** (РазрешНаСтроит.ОбъектСтроит CustomAttributes)
 
@@ -242,7 +259,7 @@ namespace IIS.RS_2
         }
         
         /// <summary>
-        /// РазрешНаСтроит.
+        /// Разреш на строит.
         /// </summary>
         //  *** Start programmer edit section *** (РазрешНаСтроит.Застройщик CustomAttributes)
 
@@ -273,6 +290,35 @@ namespace IIS.RS_2
                 //  *** Start programmer edit section *** (РазрешНаСтроит.Застройщик Set end)
 
                 //  *** End programmer edit section *** (РазрешНаСтроит.Застройщик Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "РазрешНаСтроитE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View РазрешНаСтроитE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("РазрешНаСтроитE", typeof(IIS.RS_2.РазрешНаСтроит));
+                }
+            }
+            
+            /// <summary>
+            /// "РазрешНаСтроитL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View РазрешНаСтроитL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("РазрешНаСтроитL", typeof(IIS.RS_2.РазрешНаСтроит));
+                }
             }
         }
     }

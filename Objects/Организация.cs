@@ -28,6 +28,14 @@ namespace IIS.RS_2
     //  *** End programmer edit section *** (Организация CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ОрганизацияE", new string[] {
+            "Наименование as \'Наименование\'",
+            "Адрес as \'Адрес\'",
+            "ИНН as \'ИНН\'"})]
+    [View("ОрганизацияL", new string[] {
+            "Наименование as \'Наименование\'",
+            "Адрес as \'Адрес\'",
+            "ИНН as \'ИНН\'"})]
     public class Организация : ICSSoft.STORMNET.DataObject
     {
         
@@ -135,6 +143,35 @@ namespace IIS.RS_2
                 //  *** Start programmer edit section *** (Организация.ИНН Set end)
 
                 //  *** End programmer edit section *** (Организация.ИНН Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ОрганизацияE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ОрганизацияE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ОрганизацияE", typeof(IIS.RS_2.Организация));
+                }
+            }
+            
+            /// <summary>
+            /// "ОрганизацияL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ОрганизацияL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ОрганизацияL", typeof(IIS.RS_2.Организация));
+                }
             }
         }
     }

@@ -28,6 +28,12 @@ namespace IIS.RS_2
     //  *** End programmer edit section *** (Застройщик CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ЗастройщикE", new string[] {
+            "Основной as \'Основной\'",
+            "Застройщик as \'Застройщик\'",
+            "Застройщик.Наименование as \'Наименование\'"}, Hidden=new string[] {
+            "Застройщик.Наименование"})]
+    [MasterViewDefineAttribute("ЗастройщикE", "Застройщик", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
     public class Застройщик : ICSSoft.STORMNET.DataObject
     {
         
@@ -135,6 +141,24 @@ namespace IIS.RS_2
                 //  *** Start programmer edit section *** (Застройщик.Разрешение Set end)
 
                 //  *** End programmer edit section *** (Застройщик.Разрешение Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ЗастройщикE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ЗастройщикE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ЗастройщикE", typeof(IIS.RS_2.Застройщик));
+                }
             }
         }
     }

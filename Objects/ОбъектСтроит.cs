@@ -21,13 +21,17 @@ namespace IIS.RS_2
 
 
     /// <summary>
-    /// ОбъектСтроит.
+    /// Объект строит.
     /// </summary>
     //  *** Start programmer edit section *** (ОбъектСтроит CustomAttributes)
 
     //  *** End programmer edit section *** (ОбъектСтроит CustomAttributes)
     [AutoAltered()]
+    [Caption("Объект строит")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ОбъектСтроитE", new string[] {
+            "Наименование as \'Наименование\'",
+            "Адрес as \'Адрес\'"})]
     public class ОбъектСтроит : ICSSoft.STORMNET.DataObject
     {
         
@@ -136,6 +140,24 @@ namespace IIS.RS_2
                 //  *** Start programmer edit section *** (ОбъектСтроит.Разрешение Set end)
 
                 //  *** End programmer edit section *** (ОбъектСтроит.Разрешение Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ОбъектСтроитE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ОбъектСтроитE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ОбъектСтроитE", typeof(IIS.RS_2.ОбъектСтроит));
+                }
             }
         }
     }
