@@ -37,7 +37,7 @@ namespace IIS.RS_2
     public class Застройщик : ICSSoft.STORMNET.DataObject
     {
         
-        private bool fОсновной;
+        private string fОписание;
         
         private IIS.RS_2.Организация fОрганизЗастр;
         
@@ -49,33 +49,34 @@ namespace IIS.RS_2
 
         
         /// <summary>
-        /// Основной.
+        /// Описание.
         /// </summary>
-        //  *** Start programmer edit section *** (Застройщик.Основной CustomAttributes)
+        //  *** Start programmer edit section *** (Застройщик.Описание CustomAttributes)
 
-        //  *** End programmer edit section *** (Застройщик.Основной CustomAttributes)
-        public virtual bool Основной
+        //  *** End programmer edit section *** (Застройщик.Описание CustomAttributes)
+        [StrLen(255)]
+        public virtual string Описание
         {
             get
             {
-                //  *** Start programmer edit section *** (Застройщик.Основной Get start)
+                //  *** Start programmer edit section *** (Застройщик.Описание Get start)
 
-                //  *** End programmer edit section *** (Застройщик.Основной Get start)
-                bool result = this.fОсновной;
-                //  *** Start programmer edit section *** (Застройщик.Основной Get end)
+                //  *** End programmer edit section *** (Застройщик.Описание Get start)
+                string result = this.fОписание;
+                //  *** Start programmer edit section *** (Застройщик.Описание Get end)
 
-                //  *** End programmer edit section *** (Застройщик.Основной Get end)
+                //  *** End programmer edit section *** (Застройщик.Описание Get end)
                 return result;
             }
             set
             {
-                //  *** Start programmer edit section *** (Застройщик.Основной Set start)
+                //  *** Start programmer edit section *** (Застройщик.Описание Set start)
 
-                //  *** End programmer edit section *** (Застройщик.Основной Set start)
-                this.fОсновной = value;
-                //  *** Start programmer edit section *** (Застройщик.Основной Set end)
+                //  *** End programmer edit section *** (Застройщик.Описание Set start)
+                this.fОписание = value;
+                //  *** Start programmer edit section *** (Застройщик.Описание Set end)
 
-                //  *** End programmer edit section *** (Застройщик.Основной Set end)
+                //  *** End programmer edit section *** (Застройщик.Описание Set end)
             }
         }
         

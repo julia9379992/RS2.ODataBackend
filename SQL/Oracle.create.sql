@@ -22,7 +22,7 @@ CREATE TABLE "Застройщик"
 
 	"primaryKey" RAW(16) NOT NULL,
 
-	"Основной" boolean NULL,
+	"Описание" NVARCHAR2(255) NULL,
 
 	"ОрганизЗастр_m0" RAW(16) NOT NULL,
 
