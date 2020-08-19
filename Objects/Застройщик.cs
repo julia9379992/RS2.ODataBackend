@@ -39,7 +39,7 @@ namespace IIS.RS_2
         
         private bool fОсновной;
         
-        private IIS.RS_2.Организация fЗастройщик;
+        private IIS.RS_2.Организация fОрганизЗастр;
         
         private IIS.RS_2.РазрешНаСтроит fРазрешение;
         
@@ -82,32 +82,32 @@ namespace IIS.RS_2
         /// <summary>
         /// Застройщик.
         /// </summary>
-        //  *** Start programmer edit section *** (Застройщик.Застройщик CustomAttributes)
+        //  *** Start programmer edit section *** (Застройщик.ОрганизЗастр CustomAttributes)
 
-        //  *** End programmer edit section *** (Застройщик.Застройщик CustomAttributes)
+        //  *** End programmer edit section *** (Застройщик.ОрганизЗастр CustomAttributes)
         [NotNull()]
-        public virtual IIS.RS_2.Организация Застройщик
+        public virtual IIS.RS_2.Организация ОрганизЗастр
         {
             get
             {
-                //  *** Start programmer edit section *** (Застройщик.Застройщик Get start)
+                //  *** Start programmer edit section *** (Застройщик.ОрганизЗастр Get start)
 
-                //  *** End programmer edit section *** (Застройщик.Застройщик Get start)
-                IIS.RS_2.Организация result = this.fЗастройщик;
-                //  *** Start programmer edit section *** (Застройщик.Застройщик Get end)
+                //  *** End programmer edit section *** (Застройщик.ОрганизЗастр Get start)
+                IIS.RS_2.Организация result = this.fОрганизЗастр;
+                //  *** Start programmer edit section *** (Застройщик.ОрганизЗастр Get end)
 
-                //  *** End programmer edit section *** (Застройщик.Застройщик Get end)
+                //  *** End programmer edit section *** (Застройщик.ОрганизЗастр Get end)
                 return result;
             }
             set
             {
-                //  *** Start programmer edit section *** (Застройщик.Застройщик Set start)
+                //  *** Start programmer edit section *** (Застройщик.ОрганизЗастр Set start)
 
-                //  *** End programmer edit section *** (Застройщик.Застройщик Set start)
-                this.fЗастройщик = value;
-                //  *** Start programmer edit section *** (Застройщик.Застройщик Set end)
+                //  *** End programmer edit section *** (Застройщик.ОрганизЗастр Set start)
+                this.fОрганизЗастр = value;
+                //  *** Start programmer edit section *** (Застройщик.ОрганизЗастр Set end)
 
-                //  *** End programmer edit section *** (Застройщик.Застройщик Set end)
+                //  *** End programmer edit section *** (Застройщик.ОрганизЗастр Set end)
             }
         }
         
