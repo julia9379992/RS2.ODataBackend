@@ -19,7 +19,7 @@ CREATE TABLE [Застройщик] (
 
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
 
-	 [Основной] boolean  NULL,
+	 [Описание] VARCHAR(255)  NULL,
 
 	 [ОрганизЗастр_m0] UNIQUEIDENTIFIER  NOT NULL,
 
