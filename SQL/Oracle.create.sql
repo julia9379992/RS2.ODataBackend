@@ -17,7 +17,7 @@ CREATE TABLE "Организация"
 ) ;
 
 
-CREATE TABLE "Застройщик"
+CREATE TABLE "ЗастройщОрг"
 (
 
 	"primaryKey" RAW(16) NOT NULL,
@@ -264,15 +264,15 @@ CREATE TABLE "ApplicationLog"
 
 
 
-ALTER TABLE "Застройщик"
-	ADD CONSTRAINT "Застройщик_FО_6085" FOREIGN KEY ("ОрганизЗастр_m0") REFERENCES "Организация" ("primaryKey");
+ALTER TABLE "ЗастройщОрг"
+	ADD CONSTRAINT "ЗастройщОрг_F_9640" FOREIGN KEY ("ОрганизЗастр_m0") REFERENCES "Организация" ("primaryKey");
 
-CREATE INDEX "Застройщик_IО_6047" on "Застройщик" ("ОрганизЗастр_m0");
+CREATE INDEX "ЗастройщОрг_I_3709" on "ЗастройщОрг" ("ОрганизЗастр_m0");
 
-ALTER TABLE "Застройщик"
-	ADD CONSTRAINT "Застройщик_FР_4382" FOREIGN KEY ("Разрешение_m0") REFERENCES "РазрешНаСтроит" ("primaryKey");
+ALTER TABLE "ЗастройщОрг"
+	ADD CONSTRAINT "ЗастройщОрг_F_6629" FOREIGN KEY ("Разрешение_m0") REFERENCES "РазрешНаСтроит" ("primaryKey");
 
-CREATE INDEX "Застройщик_IР_8270" on "Застройщик" ("Разрешение_m0");
+CREATE INDEX "ЗастройщОрг_I_1818" on "ЗастройщОрг" ("Разрешение_m0");
 
 ALTER TABLE "ОбъектСтроит"
 	ADD CONSTRAINT "ОбъектСтроит__9500" FOREIGN KEY ("Разрешение_m0") REFERENCES "РазрешНаСтроит" ("primaryKey");

@@ -15,7 +15,7 @@ CREATE TABLE [Организация] (
 	 PRIMARY KEY ([primaryKey]))
 
 
-CREATE TABLE [Застройщик] (
+CREATE TABLE [ЗастройщОрг] (
 
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
 
@@ -239,11 +239,11 @@ CREATE TABLE [ApplicationLog] (
 
 
 
- ALTER TABLE [Застройщик] ADD CONSTRAINT [Застройщик_FОрганизация_0] FOREIGN KEY ([ОрганизЗастр_m0]) REFERENCES [Организация]
-CREATE INDEX Застройщик_IОрганизЗастр_m0 on [Застройщик] ([ОрганизЗастр_m0])
+ ALTER TABLE [ЗастройщОрг] ADD CONSTRAINT [ЗастройщОрг_FОрганизация_0] FOREIGN KEY ([ОрганизЗастр_m0]) REFERENCES [Организация]
+CREATE INDEX ЗастройщОрг_IОрганизЗастр_m0 on [ЗастройщОрг] ([ОрганизЗастр_m0])
 
- ALTER TABLE [Застройщик] ADD CONSTRAINT [Застройщик_FРазрешНаСтроит_0] FOREIGN KEY ([Разрешение_m0]) REFERENCES [РазрешНаСтроит]
-CREATE INDEX Застройщик_IРазрешение_m0 on [Застройщик] ([Разрешение_m0])
+ ALTER TABLE [ЗастройщОрг] ADD CONSTRAINT [ЗастройщОрг_FРазрешНаСтроит_0] FOREIGN KEY ([Разрешение_m0]) REFERENCES [РазрешНаСтроит]
+CREATE INDEX ЗастройщОрг_IРазрешение_m0 on [ЗастройщОрг] ([Разрешение_m0])
 
  ALTER TABLE [ОбъектСтроит] ADD CONSTRAINT [ОбъектСтроит_FРазрешНаСтроит_0] FOREIGN KEY ([Разрешение_m0]) REFERENCES [РазрешНаСтроит]
 CREATE INDEX ОбъектСтроит_IРазрешение_m0 on [ОбъектСтроит] ([Разрешение_m0])
